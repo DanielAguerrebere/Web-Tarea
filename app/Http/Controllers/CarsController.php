@@ -50,6 +50,31 @@ class CarsController extends Controller
 
     }
 
+    public function store_order2(Request $request){
+        $origin=$_POST['origin'];
+        $destiny=$_POST['destiny'];
+        $reservation=$_POST['reservation'];
+        $return=$_POST['return'];
+
+        $condOrigin = isset($origin)&&!empty($origin);
+        $condDestiny = isset($destiny)&&!empty($destiny);
+        $condReservation = isset($reservation)&&!empty($reservation);
+        $condReturn = isset($return)&&!empty($return);
+
+        $data = [
+            'categories'  => \App\Category::all(),
+            'request'   => $request->all()
+        ];
+
+        if($condOrigin && $condDestiny && $condReservation && $condReturn){
+            return view('Categories.available')->with($data);
+        }
+        else{
+            $locations=\App\Location::all();
+            return redirect('/reservations/')->withLocations($locations);
+        }
+    }
+
     public function show(){
     	
     }

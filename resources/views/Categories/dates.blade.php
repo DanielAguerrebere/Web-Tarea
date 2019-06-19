@@ -34,7 +34,7 @@
 			<div class="form-group">
 				<label for="reservation">Reservation date:</label>
 				<input type="date" name="reservation" value="<?$date->getTimestamp();?>" min="<?$date->getTimestamp();?>" max="2019-12-31"
-				class="form-control" required>
+				class="form-control" >
 			</div>
 			<div class="form-group">
 				<label for="return">Return date:</label>

@@ -17,7 +17,8 @@ Route::get('/cars/create/', ['uses'=>'CarsController@index','as'=>'cars_index'] 
 Route::post('/store/', 'CarsController@store');
 Route::get('/delete/', 'CarsController@delete');
 Route::post('/available/', ['uses'=>'CarsController@available','as'=>'cars_available']);
-Route::post('/save_res/', ['uses'=>'CarsController@store_order','as'=>'cars_res']);
+#Route::post('/save_res/', ['uses'=>'CarsController@store_order','as'=>'cars_res']);
+Route::post('/save_res/', ['uses'=>'CarsController@store_order2','as'=>'cars_res']);
 Route::get('/reservations/', function(){
 	$locations=\App\Location::all();
 	return view('Categories.dates')->withLocations($locations);
