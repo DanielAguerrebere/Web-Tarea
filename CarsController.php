@@ -17,7 +17,7 @@ class CarsController extends Controller
     	
     }
     public function available(Request $request){
-        var_dump($request->all());
+        #var_dump($request->all());
         $data = [
             'categories'  => \App\Category::all(),
             'validation'   => $request->all()
