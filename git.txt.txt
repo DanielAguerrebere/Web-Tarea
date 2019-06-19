@@ -1,0 +1,17 @@
+USE dbname;
+CREATE TABLE locations ( 
+    id int unsigned not null auto_increment, 
+    city varchar(20) not null, 
+    state varchar(20 not null,
+    street varchar(20)));
+    
+
+INSERT INTO locations VALUES (DEFAULT,'Guadalajara', 'Jalisco', 'Av. Vallarta');
+INSERT INTO locations VALUES (DEFAULT,'Hermosillo', 'Sonora', 'Av. Rojo');
+INSERT INTO locations VALUES (DEFAULT,'Morelia', 'Michoacan', 'Av. Verde');
+INSERT INTO locations VALUES (DEFAULT,'Aguascalientes', 'Aguascalientes', 'Av. Juarez');
+INSERT INTO locations VALUES (DEFAULT,'Xalapa', 'Veracruz', 'Av. Gato');
+INSERT INTO locations VALUES (DEFAULT,'Leon', 'Guanajuato', 'Av. Reforma');
+INSERT INTO locations VALUES (DEFAULT,'Guadalajara', 'Jalisco', 'Av. Patria');
+INSERT INTO locations VALUES (DEFAULT,'Cholula', 'Puebla', 'Av. Enrique Diaz');
+INSERT INTO locations VALUES (DEFAULT,'Guadalajara', 'Jalisco', 'Av. Miguel Hidalgo');
